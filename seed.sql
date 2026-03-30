@@ -56,8 +56,8 @@ ON CONFLICT (key) DO NOTHING;
 INSERT INTO site_config (key, value, category) VALUES
   ('nav', '[
     {"label": "Home", "href": "/", "icon": "home", "public": true},
-    {"label": "About", "href": "/about.html", "icon": "info", "public": true},
-    {"label": "Volunteer", "href": "/volunteer.html", "icon": "heart", "public": true},
+    {"label": "About", "href": "/page.html?slug=about", "icon": "info", "public": true},
+    {"label": "Volunteer", "href": "/page.html?slug=volunteer", "icon": "heart", "public": true},
     {"label": "Members", "href": "/directory.html", "icon": "users", "auth": true, "feature": "feature_directory"},
     {"label": "Events", "href": "/events.html", "icon": "calendar", "feature": "feature_events"},
     {"label": "Resources", "href": "/resources.html", "icon": "book-open", "feature": "feature_resources"},
