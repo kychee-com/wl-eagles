@@ -398,7 +398,7 @@ SELECT 'Eagles Spring Gala 2026',
   'Century II Performing Arts & Convention Center, 225 W Douglas Ave, Wichita, KS 67202',
   now() + interval '21 days' + interval '18 hours',
   now() + interval '21 days' + interval '22 hours',
-  200, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-gala.jpg', true,
+  200, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-fundraiser-gala.jpg', true,
   (SELECT id FROM members WHERE email = 'marcus.reid@eagleswichita.org')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Eagles Spring Gala 2026');
 
@@ -409,7 +409,7 @@ SELECT 'Youth Mentoring Saturday',
   'Wichita Community Center, 2700 E 18th St N, Wichita, KS 67214',
   now() + interval '7 days' + interval '10 hours',
   now() + interval '7 days' + interval '14 hours',
-  30, NULL, true,
+  30, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-youth-day.jpg', true,
   (SELECT id FROM members WHERE email = 'devon.jackson@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Youth Mentoring Saturday');
 
@@ -420,7 +420,7 @@ SELECT 'New Volunteer Training Workshop',
   'Eagles HQ, 1845 N Fairmount St, Wichita, KS 67260',
   now() + interval '14 days' + interval '13 hours',
   now() + interval '14 days' + interval '16 hours',
-  25, NULL, false,
+  25, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-training.jpg', false,
   (SELECT id FROM members WHERE email = 'diana.flores@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'New Volunteer Training Workshop');
 
@@ -431,7 +431,7 @@ SELECT 'Winter Coat Drive',
   'Evergreen Recreation Center, 2700 N Woodland St, Wichita, KS 67204',
   now() - interval '45 days' + interval '9 hours',
   now() - interval '45 days' + interval '14 hours',
-  60, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-coat-drive.jpg', false,
+  60, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-food-drive.jpg', false,
   (SELECT id FROM members WHERE email = 'keisha.brown@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Winter Coat Drive');
 
@@ -442,7 +442,7 @@ SELECT 'Habitat for Humanity Build Day',
   '1422 N Poplar St, Wichita, KS 67214',
   now() - interval '30 days' + interval '7 hours',
   now() - interval '30 days' + interval '16 hours',
-  40, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-habitat.jpg', false,
+  40, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-habitat-build.jpg', false,
   (SELECT id FROM members WHERE email = 'terrence.washington@yahoo.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Habitat for Humanity Build Day');
 
@@ -453,7 +453,7 @@ SELECT 'MLK Day of Service',
   'Boys & Girls Club of South Central KS, 2400 E 21st St, Wichita, KS 67214',
   now() - interval '60 days' + interval '8 hours',
   now() - interval '60 days' + interval '15 hours',
-  100, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-mlk.jpg', false,
+  100, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-youth-day.jpg', false,
   (SELECT id FROM members WHERE email = 'marcus.reid@eagleswichita.org')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'MLK Day of Service');
 
@@ -464,7 +464,7 @@ SELECT 'Holiday Food Baskets Packing',
   'Kansas Food Bank, 1919 E Douglas Ave, Wichita, KS 67211',
   now() - interval '75 days' + interval '8 hours',
   now() - interval '75 days' + interval '13 hours',
-  70, NULL, false,
+  70, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-food-drive.jpg', false,
   (SELECT id FROM members WHERE email = 'roberto.castillo@hotmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Holiday Food Baskets Packing');
 
@@ -475,7 +475,7 @@ SELECT 'Eagles Fall Festival',
   'Sedgwick County Park, 6501 W 21st St N, Wichita, KS 67205',
   now() - interval '90 days' + interval '11 hours',
   now() - interval '90 days' + interval '17 hours',
-  100, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-fall-fest.jpg', false,
+  100, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-park-cleanup.jpg', false,
   (SELECT id FROM members WHERE email = 'amanda.brooks@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Eagles Fall Festival');
 
@@ -486,7 +486,7 @@ SELECT 'Back to School Supply Drive',
   'Century II Expo Hall, 225 W Douglas Ave, Wichita, KS 67202',
   now() - interval '120 days' + interval '9 hours',
   now() - interval '120 days' + interval '14 hours',
-  60, NULL, false,
+  60, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-training.jpg', false,
   (SELECT id FROM members WHERE email = 'rachel.stone@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Back to School Supply Drive');
 
@@ -497,7 +497,7 @@ SELECT 'Community Garden Planting Day',
   'Fairmount Park, 1648 N Yale Blvd, Wichita, KS 67208',
   now() - interval '150 days' + interval '8 hours',
   now() - interval '150 days' + interval '13 hours',
-  45, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-garden.jpg', false,
+  45, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-park-cleanup.jpg', false,
   (SELECT id FROM members WHERE email = 'sarah.nguyen@outlook.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Community Garden Planting Day');
 
