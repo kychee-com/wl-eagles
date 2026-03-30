@@ -12,8 +12,6 @@ function readText(path) {
   return readFileSync(join(ROOT, path), 'utf-8');
 }
 
-const BINARY_EXTS = new Set(['.jpg', '.jpeg', '.png', '.gif', '.webp', '.ico', '.svg', '.woff', '.woff2', '.ttf', '.eot', '.pdf', '.zip']);
-
 function collectFiles(dir, base = dir) {
   const files = [];
   if (!existsSync(join(ROOT, dir))) return files;
@@ -22,13 +20,8 @@ function collectFiles(dir, base = dir) {
     if (entry.isDirectory()) {
       files.push(...collectFiles(full, base));
     } else {
-      const ext = entry.name.substring(entry.name.lastIndexOf('.')).toLowerCase();
-      if (BINARY_EXTS.has(ext)) {
-        const buf = readFileSync(join(ROOT, full));
-        files.push({ file: relative(base, full), data: buf.toString('base64'), encoding: 'base64' });
-      } else {
-        files.push({ file: relative(base, full), data: readText(full) });
-      }
+      // Use "path" reference — CLI auto-detects and base64-encodes binary files
+      files.push({ file: relative(base, full), path: './' + full });
     }
   }
   return files;
