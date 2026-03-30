@@ -13,8 +13,8 @@ INSERT INTO site_config (key, value, category) VALUES
   ('site_name', '"The Eagles — Good Samaritans of Wichita"', 'branding'),
   ('site_tagline', '"Lifting our community, one neighbor at a time"', 'branding'),
   ('site_description', '"The Eagles are a Wichita-based volunteer organization dedicated to serving our neighbors through food drives, mentoring, habitat builds, and community outreach. Founded in 2014, we believe that small acts of kindness create lasting change."', 'branding'),
-  ('logo_url', '"/storage/assets/logo.png"', 'branding'),
-  ('favicon_url', '"/storage/assets/logo.png"', 'branding')
+  ('logo_url', '"https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/logo.png"', 'branding'),
+  ('favicon_url', '"https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/logo.png"', 'branding')
 ON CONFLICT (key) DO NOTHING;
 
 -- Theme (navy + warm cream)
@@ -115,7 +115,7 @@ WHERE NOT EXISTS (SELECT 1 FROM member_custom_fields WHERE field_name = 'skills'
 
 -- Member 1: Admin
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'marcus.reid@eagleswichita.org', 'Marcus Reid', '/storage/assets/avatar-01.jpg',
+SELECT 'marcus.reid@eagleswichita.org', 'Marcus Reid', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-01.jpg',
   'Founding president of The Eagles. Retired teacher who believes every Wichitan deserves a helping hand. Passionate about youth mentoring and food security.',
   (SELECT id FROM membership_tiers WHERE name = 'Board Member'), 'admin', 'active',
   '{"phone": "316-555-0101", "neighborhood": "Riverside", "employer": "Retired — USD 259", "skills": ["mentoring", "organizing", "fundraising"]}',
@@ -124,7 +124,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'marcus.reid@eagleswichita
 
 -- Member 2: Moderator
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'diana.flores@gmail.com', 'Diana Flores', '/storage/assets/avatar-02.jpg',
+SELECT 'diana.flores@gmail.com', 'Diana Flores', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-02.jpg',
   'Bilingual community organizer and proud Wichita native. I coordinate our Spanish-language outreach and help families navigate local services.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Sponsor'), 'moderator', 'active',
   '{"phone": "316-555-0102", "neighborhood": "Planeview", "employer": "Catholic Charities of Wichita", "skills": ["organizing", "mentoring", "cooking"]}',
@@ -133,7 +133,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'diana.flores@gmail.com');
 
 -- Member 3: Moderator
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'terrence.washington@yahoo.com', 'Terrence Washington', '/storage/assets/avatar-03.jpg',
+SELECT 'terrence.washington@yahoo.com', 'Terrence Washington', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-03.jpg',
   'Construction foreman by day, Eagle volunteer on weekends. I lead our Habitat Build crews and love seeing families get their keys.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'moderator', 'active',
   '{"phone": "316-555-0103", "neighborhood": "McAdams", "employer": "Dondlinger Construction", "skills": ["construction", "driving", "organizing"]}',
@@ -142,7 +142,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'terrence.washington@yahoo
 
 -- Member 4
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'sarah.nguyen@outlook.com', 'Sarah Nguyen', '/storage/assets/avatar-04.jpg',
+SELECT 'sarah.nguyen@outlook.com', 'Sarah Nguyen', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-04.jpg',
   'Pediatric nurse at Wesley Medical Center. I volunteer because healthy communities start with caring neighbors.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0104", "neighborhood": "College Hill", "employer": "Wesley Medical Center", "skills": ["cooking", "mentoring"]}',
@@ -151,7 +151,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'sarah.nguyen@outlook.com'
 
 -- Member 5
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'james.mcallister@gmail.com', 'James McAllister', '/storage/assets/avatar-05.jpg',
+SELECT 'james.mcallister@gmail.com', 'James McAllister', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-05.jpg',
   'Wichita State alum and IT consultant. I handle our website and help seniors with tech literacy classes.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Sponsor'), 'member', 'active',
   '{"phone": "316-555-0105", "neighborhood": "Delano", "employer": "Self-employed", "skills": ["tech", "mentoring", "organizing"]}',
@@ -160,7 +160,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'james.mcallister@gmail.co
 
 -- Member 6
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'patricia.hall@gmail.com', 'Patricia Hall', '/storage/assets/avatar-06.jpg',
+SELECT 'patricia.hall@gmail.com', 'Patricia Hall', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-06.jpg',
   'Retired librarian with a passion for literacy outreach. I run our Little Free Library program and read-aloud events for kids.',
   (SELECT id FROM membership_tiers WHERE name = 'Board Member'), 'member', 'active',
   '{"phone": "316-555-0106", "neighborhood": "Crown Heights", "employer": "Retired — Wichita Public Library", "skills": ["mentoring", "organizing"]}',
@@ -169,7 +169,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'patricia.hall@gmail.com')
 
 -- Member 7
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'roberto.castillo@hotmail.com', 'Roberto Castillo', '/storage/assets/avatar-07.jpg',
+SELECT 'roberto.castillo@hotmail.com', 'Roberto Castillo', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-07.jpg',
   'Chef and restaurant owner. I organize the cooking teams for our community meals and holiday food basket program.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0107", "neighborhood": "North End", "employer": "Castillo''s Kitchen", "skills": ["cooking", "fundraising", "driving"]}',
@@ -178,7 +178,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'roberto.castillo@hotmail.
 
 -- Member 8
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'amanda.brooks@gmail.com', 'Amanda Brooks', '/storage/assets/avatar-08.jpg',
+SELECT 'amanda.brooks@gmail.com', 'Amanda Brooks', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-08.jpg',
   'Marketing manager at Spirit AeroSystems. I volunteer my design and communications skills to spread the Eagles message.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Sponsor'), 'member', 'active',
   '{"phone": "316-555-0108", "neighborhood": "Eastborough", "employer": "Spirit AeroSystems", "skills": ["fundraising", "organizing", "tech"]}',
@@ -187,7 +187,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'amanda.brooks@gmail.com')
 
 -- Member 9
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'devon.jackson@gmail.com', 'Devon Jackson', '/storage/assets/avatar-09.jpg',
+SELECT 'devon.jackson@gmail.com', 'Devon Jackson', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-09.jpg',
   'High school football coach at Heights. Got into volunteering through our youth mentoring program and never looked back.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0109", "neighborhood": "Indian Hills", "employer": "USD 259 — Heights High", "skills": ["mentoring", "driving", "construction"]}',
@@ -196,7 +196,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'devon.jackson@gmail.com')
 
 -- Member 10
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'lisa.patel@gmail.com', 'Lisa Patel', '/storage/assets/avatar-10.jpg',
+SELECT 'lisa.patel@gmail.com', 'Lisa Patel', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-10.jpg',
   'Pharmacist and first-generation Indian American. I coordinate our health screenings and medication assistance program.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0110", "neighborhood": "West Side", "employer": "Dillons Pharmacy", "skills": ["organizing", "mentoring"]}',
@@ -205,7 +205,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'lisa.patel@gmail.com');
 
 -- Member 11
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'tom.hendricks@outlook.com', 'Tom Hendricks', '/storage/assets/avatar-11.jpg',
+SELECT 'tom.hendricks@outlook.com', 'Tom Hendricks', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-11.jpg',
   'Retired firefighter. I drive our delivery van for food drives and help with disaster relief coordination.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'active',
   '{"phone": "316-555-0111", "neighborhood": "Midtown", "employer": "Retired — Wichita Fire Dept", "skills": ["driving", "construction", "organizing"]}',
@@ -214,7 +214,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'tom.hendricks@outlook.com
 
 -- Member 12
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'keisha.brown@gmail.com', 'Keisha Brown', '/storage/assets/avatar-12.jpg',
+SELECT 'keisha.brown@gmail.com', 'Keisha Brown', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-12.jpg',
   'Social worker and neighborhood advocate. I connect Eagles volunteers with families who need us most.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0112", "neighborhood": "Fairmount", "employer": "Kansas Dept of Children and Families", "skills": ["mentoring", "organizing", "cooking"]}',
@@ -223,7 +223,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'keisha.brown@gmail.com');
 
 -- Member 13
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'michael.oconnor@yahoo.com', 'Michael O''Connor', '/storage/assets/avatar-13.jpg',
+SELECT 'michael.oconnor@yahoo.com', 'Michael O''Connor', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-13.jpg',
   'Accountant at Foulston Siefkin. I handle the Eagles books and love seeing every donated dollar make an impact.',
   (SELECT id FROM membership_tiers WHERE name = 'Board Member'), 'member', 'active',
   '{"phone": "316-555-0113", "neighborhood": "College Hill", "employer": "Foulston Siefkin LLP", "skills": ["fundraising", "organizing", "tech"]}',
@@ -232,7 +232,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'michael.oconnor@yahoo.com
 
 -- Member 14
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'maria.garcia@gmail.com', 'Maria Garcia', '/storage/assets/avatar-14.jpg',
+SELECT 'maria.garcia@gmail.com', 'Maria Garcia', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-14.jpg',
   'Stay-at-home mom who brings her kids to every volunteer event. Teaching my children that giving back is a way of life.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'active',
   '{"phone": "316-555-0114", "neighborhood": "Oaklawn", "employer": "Homemaker", "skills": ["cooking", "organizing", "driving"]}',
@@ -241,7 +241,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'maria.garcia@gmail.com');
 
 -- Member 15
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'brian.kim@gmail.com', 'Brian Kim', '/storage/assets/avatar-15.jpg',
+SELECT 'brian.kim@gmail.com', 'Brian Kim', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-15.jpg',
   'Software developer at NetApp. Weekend warrior who loves the park cleanup events and trail maintenance.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0115", "neighborhood": "Bradley Fair", "employer": "NetApp", "skills": ["tech", "construction"]}',
@@ -250,7 +250,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'brian.kim@gmail.com');
 
 -- Member 16
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'janet.morrison@gmail.com', 'Janet Morrison', '/storage/assets/avatar-16.jpg',
+SELECT 'janet.morrison@gmail.com', 'Janet Morrison', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-16.jpg',
   'Real estate agent and Wichita booster. I recruit new Eagles members at every open house and neighborhood mixer.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Sponsor'), 'member', 'active',
   '{"phone": "316-555-0116", "neighborhood": "Crestview", "employer": "J.P. Weigand & Sons", "skills": ["fundraising", "organizing"]}',
@@ -259,7 +259,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'janet.morrison@gmail.com'
 
 -- Member 17
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'charles.abimbola@outlook.com', 'Charles Abimbola', '/storage/assets/avatar-17.jpg',
+SELECT 'charles.abimbola@outlook.com', 'Charles Abimbola', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-17.jpg',
   'Nigerian-born aerospace engineer at Textron Aviation. Proud to give back to the city that welcomed my family.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0117", "neighborhood": "Sleepy Hollow", "employer": "Textron Aviation", "skills": ["tech", "mentoring", "construction"]}',
@@ -268,7 +268,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'charles.abimbola@outlook.
 
 -- Member 18
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'rachel.stone@gmail.com', 'Rachel Stone', '/storage/assets/avatar-18.jpg',
+SELECT 'rachel.stone@gmail.com', 'Rachel Stone', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-18.jpg',
   'Elementary school teacher. Our back-to-school supply drive is the highlight of my year — seeing kids light up is everything.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'active',
   '{"phone": "316-555-0118", "neighborhood": "Sunnyside", "employer": "USD 259 — Sunnyside Elementary", "skills": ["mentoring", "organizing"]}',
@@ -277,7 +277,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'rachel.stone@gmail.com');
 
 -- Member 19
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'greg.whitfield@yahoo.com', 'Greg Whitfield', '/storage/assets/avatar-19.jpg',
+SELECT 'greg.whitfield@yahoo.com', 'Greg Whitfield', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-19.jpg',
   'Plumber and handyman. If it''s broken, I''ll fix it. I lead the home repair brigade for elderly neighbors.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0119", "neighborhood": "South Side", "employer": "Whitfield Plumbing", "skills": ["construction", "driving"]}',
@@ -286,7 +286,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'greg.whitfield@yahoo.com'
 
 -- Member 20
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'angela.davis@gmail.com', 'Angela Davis-Mitchell', '/storage/assets/avatar-20.jpg',
+SELECT 'angela.davis@gmail.com', 'Angela Davis-Mitchell', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-20.jpg',
   'Pastor at New Hope Fellowship. Serving the community through The Eagles aligns perfectly with my calling.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Sponsor'), 'member', 'active',
   '{"phone": "316-555-0120", "neighborhood": "North End", "employer": "New Hope Fellowship", "skills": ["mentoring", "fundraising", "organizing"]}',
@@ -295,7 +295,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'angela.davis@gmail.com');
 
 -- Member 21
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'kyle.tanaka@gmail.com', 'Kyle Tanaka', '/storage/assets/avatar-21.jpg',
+SELECT 'kyle.tanaka@gmail.com', 'Kyle Tanaka', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-21.jpg',
   'WSU grad student studying public health. Volunteering with The Eagles is the best fieldwork I could ask for.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'active',
   '{"phone": "316-555-0121", "neighborhood": "University Park", "employer": "Wichita State University", "skills": ["tech", "organizing"]}',
@@ -304,7 +304,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'kyle.tanaka@gmail.com');
 
 -- Member 22
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'donna.schultz@outlook.com', 'Donna Schultz', '/storage/assets/avatar-22.jpg',
+SELECT 'donna.schultz@outlook.com', 'Donna Schultz', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-22.jpg',
   'Retired banker and grandmother of six. I bake for every Eagles event and manage our holiday gift-wrapping team.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0122", "neighborhood": "Bel Aire", "employer": "Retired — Intrust Bank", "skills": ["cooking", "fundraising"]}',
@@ -313,7 +313,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'donna.schultz@outlook.com
 
 -- Member 23
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'antonio.reyes@gmail.com', 'Antonio Reyes', '/storage/assets/avatar-23.jpg',
+SELECT 'antonio.reyes@gmail.com', 'Antonio Reyes', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-23.jpg',
   'Auto mechanic and car donation coordinator. I keep our Eagles delivery van running and organize free oil-change days.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Member'), 'member', 'active',
   '{"phone": "316-555-0123", "neighborhood": "Hilltop", "employer": "Reyes Auto Repair", "skills": ["driving", "construction", "tech"]}',
@@ -322,7 +322,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'antonio.reyes@gmail.com')
 
 -- Member 24
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'stephanie.wright@gmail.com', 'Stephanie Wright', '/storage/assets/avatar-24.jpg',
+SELECT 'stephanie.wright@gmail.com', 'Stephanie Wright', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-24.jpg',
   'Graphic designer freelancing from home. I design all the Eagles flyers, banners, and social media graphics.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'active',
   '{"phone": "316-555-0124", "neighborhood": "Old Town", "employer": "Freelance", "skills": ["tech", "organizing"]}',
@@ -331,7 +331,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'stephanie.wright@gmail.co
 
 -- Member 25
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'david.leung@yahoo.com', 'David Leung', '/storage/assets/avatar-25.jpg',
+SELECT 'david.leung@yahoo.com', 'David Leung', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-25.jpg',
   'Dentist who runs free dental screening days through The Eagles. Oral health is community health.',
   (SELECT id FROM membership_tiers WHERE name = 'Eagle Sponsor'), 'member', 'active',
   '{"phone": "316-555-0125", "neighborhood": "Tallgrass", "employer": "Leung Family Dentistry", "skills": ["mentoring", "fundraising"]}',
@@ -340,7 +340,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'david.leung@yahoo.com');
 
 -- Member 26
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'jasmine.powell@gmail.com', 'Jasmine Powell', '/storage/assets/avatar-26.jpg',
+SELECT 'jasmine.powell@gmail.com', 'Jasmine Powell', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-26.jpg',
   'Journalism student at WSU and aspiring photojournalist. I document Eagles events and write stories for our newsletter.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'active',
   '{"phone": "316-555-0126", "neighborhood": "Fairmount", "employer": "Wichita State University", "skills": ["tech", "organizing"]}',
@@ -349,7 +349,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'jasmine.powell@gmail.com'
 
 -- Member 27: Pending
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'nathan.cole@gmail.com', 'Nathan Cole', '/storage/assets/avatar-27.jpg',
+SELECT 'nathan.cole@gmail.com', 'Nathan Cole', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-27.jpg',
   'New to Wichita — just moved from Topeka for a job at Koch Industries. Looking to meet people and give back.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'pending',
   '{"phone": "316-555-0127", "neighborhood": "Downtown", "employer": "Koch Industries", "skills": ["tech", "driving"]}',
@@ -358,7 +358,7 @@ WHERE NOT EXISTS (SELECT 1 FROM members WHERE email = 'nathan.cole@gmail.com');
 
 -- Member 28: Pending
 INSERT INTO members (email, display_name, avatar_url, bio, tier_id, role, status, custom_fields, joined_at)
-SELECT 'priya.sharma@outlook.com', 'Priya Sharma', '/storage/assets/avatar-28.jpg',
+SELECT 'priya.sharma@outlook.com', 'Priya Sharma', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/avatar-28.jpg',
   'ER nurse at Via Christi who wants to do more for our underserved neighborhoods. Excited to join The Eagles.',
   (SELECT id FROM membership_tiers WHERE name = 'Volunteer'), 'member', 'pending',
   '{"phone": "316-555-0128", "neighborhood": "Greenwich Heights", "employer": "Ascension Via Christi", "skills": ["cooking", "mentoring"]}',
@@ -376,7 +376,7 @@ SELECT 'Annual Spring Food Drive',
   'Exploration Place, 300 N McLean Blvd, Wichita, KS 67203',
   now() + interval '3 days' + interval '9 hours',
   now() + interval '3 days' + interval '15 hours',
-  80, '/storage/assets/event-food-drive.jpg', false,
+  80, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-food-drive.jpg', false,
   (SELECT id FROM members WHERE email = 'marcus.reid@eagleswichita.org')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Annual Spring Food Drive');
 
@@ -387,7 +387,7 @@ SELECT 'Riverside Park Cleanup Day',
   'Riverside Park, 700 Nims St, Wichita, KS 67203',
   now() + interval '10 days' + interval '8 hours',
   now() + interval '10 days' + interval '12 hours',
-  50, '/storage/assets/event-park-cleanup.jpg', false,
+  50, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-park-cleanup.jpg', false,
   (SELECT id FROM members WHERE email = 'diana.flores@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Riverside Park Cleanup Day');
 
@@ -398,7 +398,7 @@ SELECT 'Eagles Spring Gala 2026',
   'Century II Performing Arts & Convention Center, 225 W Douglas Ave, Wichita, KS 67202',
   now() + interval '21 days' + interval '18 hours',
   now() + interval '21 days' + interval '22 hours',
-  200, '/storage/assets/event-gala.jpg', true,
+  200, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-gala.jpg', true,
   (SELECT id FROM members WHERE email = 'marcus.reid@eagleswichita.org')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Eagles Spring Gala 2026');
 
@@ -431,7 +431,7 @@ SELECT 'Winter Coat Drive',
   'Evergreen Recreation Center, 2700 N Woodland St, Wichita, KS 67204',
   now() - interval '45 days' + interval '9 hours',
   now() - interval '45 days' + interval '14 hours',
-  60, '/storage/assets/event-coat-drive.jpg', false,
+  60, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-coat-drive.jpg', false,
   (SELECT id FROM members WHERE email = 'keisha.brown@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Winter Coat Drive');
 
@@ -442,7 +442,7 @@ SELECT 'Habitat for Humanity Build Day',
   '1422 N Poplar St, Wichita, KS 67214',
   now() - interval '30 days' + interval '7 hours',
   now() - interval '30 days' + interval '16 hours',
-  40, '/storage/assets/event-habitat.jpg', false,
+  40, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-habitat.jpg', false,
   (SELECT id FROM members WHERE email = 'terrence.washington@yahoo.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Habitat for Humanity Build Day');
 
@@ -453,7 +453,7 @@ SELECT 'MLK Day of Service',
   'Boys & Girls Club of South Central KS, 2400 E 21st St, Wichita, KS 67214',
   now() - interval '60 days' + interval '8 hours',
   now() - interval '60 days' + interval '15 hours',
-  100, '/storage/assets/event-mlk.jpg', false,
+  100, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-mlk.jpg', false,
   (SELECT id FROM members WHERE email = 'marcus.reid@eagleswichita.org')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'MLK Day of Service');
 
@@ -475,7 +475,7 @@ SELECT 'Eagles Fall Festival',
   'Sedgwick County Park, 6501 W 21st St N, Wichita, KS 67205',
   now() - interval '90 days' + interval '11 hours',
   now() - interval '90 days' + interval '17 hours',
-  100, '/storage/assets/event-fall-fest.jpg', false,
+  100, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-fall-fest.jpg', false,
   (SELECT id FROM members WHERE email = 'amanda.brooks@gmail.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Eagles Fall Festival');
 
@@ -497,7 +497,7 @@ SELECT 'Community Garden Planting Day',
   'Fairmount Park, 1648 N Yale Blvd, Wichita, KS 67208',
   now() - interval '150 days' + interval '8 hours',
   now() - interval '150 days' + interval '13 hours',
-  45, '/storage/assets/event-garden.jpg', false,
+  45, 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-garden.jpg', false,
   (SELECT id FROM members WHERE email = 'sarah.nguyen@outlook.com')
 WHERE NOT EXISTS (SELECT 1 FROM events WHERE title = 'Community Garden Planting Day');
 
@@ -1396,77 +1396,77 @@ WHERE NOT EXISTS (SELECT 1 FROM announcements WHERE title = 'Holiday Food Basket
 -- ============================================
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Eagles Volunteer Handbook', 'Complete guide for new and returning volunteers — safety protocols, communication guidelines, and program overviews.', 'Handbooks', '/storage/assets/volunteer-handbook.pdf', 'pdf', false,
+SELECT 'Eagles Volunteer Handbook', 'Complete guide for new and returning volunteers — safety protocols, communication guidelines, and program overviews.', 'Handbooks', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/volunteer-handbook.pdf', 'pdf', false,
   (SELECT id FROM members WHERE email = 'diana.flores@gmail.com'), now() - interval '180 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Eagles Volunteer Handbook');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Tax Donation Receipt Template', 'Fillable PDF receipt for tax-deductible donations. Use for cash and in-kind contributions over $25.', 'Forms', '/storage/assets/donation-receipt-template.pdf', 'pdf', true,
+SELECT 'Tax Donation Receipt Template', 'Fillable PDF receipt for tax-deductible donations. Use for cash and in-kind contributions over $25.', 'Forms', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/donation-receipt-template.pdf', 'pdf', true,
   (SELECT id FROM members WHERE email = 'michael.oconnor@yahoo.com'), now() - interval '160 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Tax Donation Receipt Template');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Safety Training Guide', 'Required reading for all volunteers participating in construction, cleanup, and food handling events.', 'Training', '/storage/assets/safety-training.pdf', 'pdf', false,
+SELECT 'Safety Training Guide', 'Required reading for all volunteers participating in construction, cleanup, and food handling events.', 'Training', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/safety-training.pdf', 'pdf', false,
   (SELECT id FROM members WHERE email = 'terrence.washington@yahoo.com'), now() - interval '150 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Safety Training Guide');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Eagles Brand Kit', 'Official logos, color palette, fonts, and usage guidelines for all Eagles communications and materials.', 'Media', '/storage/assets/brand-kit.zip', 'zip', true,
+SELECT 'Eagles Brand Kit', 'Official logos, color palette, fonts, and usage guidelines for all Eagles communications and materials.', 'Media', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/brand-kit.zip', 'zip', true,
   (SELECT id FROM members WHERE email = 'stephanie.wright@gmail.com'), now() - interval '40 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Eagles Brand Kit');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Annual Report 2025', 'Our year in review — financials, volunteer hours, families served, and strategic goals for 2026.', 'Handbooks', '/storage/assets/annual-report-2025.pdf', 'pdf', false,
+SELECT 'Annual Report 2025', 'Our year in review — financials, volunteer hours, families served, and strategic goals for 2026.', 'Handbooks', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/annual-report-2025.pdf', 'pdf', false,
   (SELECT id FROM members WHERE email = 'marcus.reid@eagleswichita.org'), now() - interval '60 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Annual Report 2025');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'New Member Orientation Slides', 'Slide deck covering Eagles history, mission, programs, and how to get involved. Used at training workshops.', 'Training', '/storage/assets/orientation-slides.pdf', 'pdf', false,
+SELECT 'New Member Orientation Slides', 'Slide deck covering Eagles history, mission, programs, and how to get involved. Used at training workshops.', 'Training', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/orientation-slides.pdf', 'pdf', false,
   (SELECT id FROM members WHERE email = 'diana.flores@gmail.com'), now() - interval '30 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'New Member Orientation Slides');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Volunteer Hour Log Sheet', 'Printable form for tracking volunteer hours at events. Submit completed sheets to your committee chair.', 'Forms', '/storage/assets/hour-log-sheet.pdf', 'pdf', true,
+SELECT 'Volunteer Hour Log Sheet', 'Printable form for tracking volunteer hours at events. Submit completed sheets to your committee chair.', 'Forms', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/hour-log-sheet.pdf', 'pdf', true,
   (SELECT id FROM members WHERE email = 'diana.flores@gmail.com'), now() - interval '140 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Volunteer Hour Log Sheet');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Food Handling Certification Guide', 'Study guide for the Kansas food handler certification required for all cooking and food distribution volunteers.', 'Training', '/storage/assets/food-handling-guide.pdf', 'pdf', true,
+SELECT 'Food Handling Certification Guide', 'Study guide for the Kansas food handler certification required for all cooking and food distribution volunteers.', 'Training', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/food-handling-guide.pdf', 'pdf', true,
   (SELECT id FROM members WHERE email = 'roberto.castillo@hotmail.com'), now() - interval '120 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Food Handling Certification Guide');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Sponsorship Prospectus 2026', 'Overview of sponsorship tiers and benefits for potential corporate and individual sponsors.', 'Forms', '/storage/assets/sponsorship-prospectus.pdf', 'pdf', true,
+SELECT 'Sponsorship Prospectus 2026', 'Overview of sponsorship tiers and benefits for potential corporate and individual sponsors.', 'Forms', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/sponsorship-prospectus.pdf', 'pdf', true,
   (SELECT id FROM members WHERE email = 'michael.oconnor@yahoo.com'), now() - interval '45 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Sponsorship Prospectus 2026');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Habitat Build Day Photos', 'Photo gallery from the February Habitat for Humanity build day — framing, drywall, and the family visit.', 'Media', '/storage/assets/habitat-photos.zip', 'zip', false,
+SELECT 'Habitat Build Day Photos', 'Photo gallery from the February Habitat for Humanity build day — framing, drywall, and the family visit.', 'Media', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/habitat-photos.zip', 'zip', false,
   (SELECT id FROM members WHERE email = 'jasmine.powell@gmail.com'), now() - interval '25 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Habitat Build Day Photos');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Winter Coat Drive Photos', 'Photo gallery from the Winter Coat Drive — sorting, distribution, and happy families.', 'Media', '/storage/assets/coat-drive-photos.zip', 'zip', false,
+SELECT 'Winter Coat Drive Photos', 'Photo gallery from the Winter Coat Drive — sorting, distribution, and happy families.', 'Media', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/coat-drive-photos.zip', 'zip', false,
   (SELECT id FROM members WHERE email = 'jasmine.powell@gmail.com'), now() - interval '40 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Winter Coat Drive Photos');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Event Planning Checklist', 'Step-by-step checklist for organizing Eagles events — from venue booking to post-event reporting.', 'Handbooks', '/storage/assets/event-checklist.pdf', 'pdf', true,
+SELECT 'Event Planning Checklist', 'Step-by-step checklist for organizing Eagles events — from venue booking to post-event reporting.', 'Handbooks', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/event-checklist.pdf', 'pdf', true,
   (SELECT id FROM members WHERE email = 'amanda.brooks@gmail.com'), now() - interval '35 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Event Planning Checklist');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Mentoring Program Guidelines', 'Policies, expectations, and best practices for volunteer mentors in our youth programs.', 'Training', '/storage/assets/mentoring-guidelines.pdf', 'pdf', true,
+SELECT 'Mentoring Program Guidelines', 'Policies, expectations, and best practices for volunteer mentors in our youth programs.', 'Training', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/mentoring-guidelines.pdf', 'pdf', true,
   (SELECT id FROM members WHERE email = 'devon.jackson@gmail.com'), now() - interval '100 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Mentoring Program Guidelines');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Corporate Matching Gift Guide', 'How to get your employer to match your Eagles donation — instructions for Spirit, Koch, Textron, and others.', 'Forms', '/storage/assets/matching-gift-guide.pdf', 'pdf', false,
+SELECT 'Corporate Matching Gift Guide', 'How to get your employer to match your Eagles donation — instructions for Spirit, Koch, Textron, and others.', 'Forms', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/matching-gift-guide.pdf', 'pdf', false,
   (SELECT id FROM members WHERE email = 'amanda.brooks@gmail.com'), now() - interval '20 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Corporate Matching Gift Guide');
 
 INSERT INTO resources (title, description, category, file_url, file_type, is_members_only, uploaded_by, created_at)
-SELECT 'Eagles Social Media Toolkit', 'Pre-written posts, hashtags, and image templates for promoting Eagles events on social media.', 'Media', '/storage/assets/social-media-toolkit.zip', 'zip', true,
+SELECT 'Eagles Social Media Toolkit', 'Pre-written posts, hashtags, and image templates for promoting Eagles events on social media.', 'Media', 'https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/social-media-toolkit.zip', 'zip', true,
   (SELECT id FROM members WHERE email = 'stephanie.wright@gmail.com'), now() - interval '15 days'
 WHERE NOT EXISTS (SELECT 1 FROM resources WHERE title = 'Eagles Social Media Toolkit');
 
@@ -1700,7 +1700,7 @@ SELECT 'index', 'hero', '{
   "subheading": "The Eagles are 200+ volunteers dedicated to food drives, habitat builds, youth mentoring, and community outreach across Sedgwick County.",
   "cta_text": "Join The Eagles",
   "cta_href": "#signup",
-  "bg_image": "/storage/assets/hero-bg.jpg"
+  "bg_image": "https://raw.githubusercontent.com/kychee-com/wl-eagles/main/assets/hero.jpg"
 }', 1, true
 WHERE NOT EXISTS (SELECT 1 FROM sections WHERE page_slug = 'index' AND section_type = 'hero');
 
