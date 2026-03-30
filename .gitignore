@@ -1,0 +1,4 @@
+node_modules/
+.migrations.sql
+app.json
+site/js/env.js
